@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: 'args'
+        required: true
+        default: '0'
+        type: string
+  pull_request:
+
+env: 
+  key: pass
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo pass
